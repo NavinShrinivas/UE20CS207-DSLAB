@@ -1,0 +1,18 @@
+Task 1 : Write a recursive function to check whether a given substring exist in
+         a given string or not.
+
+Task 2 : Write a recursive function to get all possible permustations of a given string
+
+Task 3 : Write a program using DMA to store details about students 
+         (name,srn,sem,marks of 5 subjects) , and print average of an asked subjects 
+         using subject codes , and also print the details of all students when
+         asked to do so.
+
+Task 4 : recursive implmentation og tower of hanoi
+
+Task 5 : Write a program that stores data of IPL Players , 
+         [name, team].
+         Details of matched played [14 matches , player playing the match or not]
+         [runs a player scored in that game]
+         also compute the number of matches played by a player.
+         
