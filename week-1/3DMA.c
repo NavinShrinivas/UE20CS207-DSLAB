@@ -4,7 +4,7 @@ int main(){
     int n;
     printf("Enter number of students : ");
     scanf("%d",&n);
-    struct student stu [n];
+    struct student* stu = (struct student*)malloc(n*sizeof(struct student));
     for(int i=0;i<n;i++)
     {
         printf("Details for student %d : \n",i+1);
@@ -54,15 +54,16 @@ int main(){
             for(int i=0;i<n;i++)
             {
                 printf("Details of student %d : \n",i+1);
-                printf("name : %s \n" , stu->name);
-                printf("SRN : %s \n" , stu->srn);
-                printf("semester : %d \n" ,stu->sem);
-                printf("marks in phy : %d \n",stu->py);
-                printf("marks in chem : %d \n",stu->cy);
-                printf("marks in cs : %d \n",stu->cs);
-                printf("marks in math : %d \n",stu->ma);
-                printf("marks in bio : %d \n",stu->bt);
+                printf("name : %s \n" , (stu+i)->name);
+                printf("SRN : %s \n" , (stu+i)->srn);
+                printf("semester : %d \n" ,(stu+i)->sem);
+                printf("marks in phy : %d \n",(stu+i)->py);
+                printf("marks in chem : %d \n",(stu+i)->cy);
+                printf("marks in cs : %d \n",(stu+i)->cs);
+                printf("marks in math : %d \n",(stu+i)->ma);
+                printf("marks in bio : %d \n",(stu+i)->bt);
             }
+            printf("%s",(stu+1)->name);
         }
 
     }

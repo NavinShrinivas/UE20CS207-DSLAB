@@ -60,9 +60,9 @@ int findavg(char* code , struct student* stu , int n)
 }
 void swap(struct student* stu , int a , int b)
 {
-    struct student* temp = stu+a;
+    struct student temp = *(stu+a);
     *(stu+a)=*(stu+b);
-    *(stu+b)=*temp;
+    *(stu+b)=temp;
 }
 void sortedisp(struct student* stu , int n)
 {
