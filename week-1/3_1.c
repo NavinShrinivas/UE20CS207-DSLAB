@@ -58,11 +58,11 @@ int findavg(char* code , struct student* stu , int n)
         }
 
 }
-void swap(char* s,char* a)
+void swap(struct student* stu , int a , int b)
 {
-    char temp = *a;
-    *a=*s;
-    *s=temp;
+    struct student* temp = stu+a;
+    *(stu+a)=*(stu+b);
+    *(stu+b)=*temp;
 }
 void sortedisp(struct student* stu , int n)
 {
@@ -72,7 +72,7 @@ void sortedisp(struct student* stu , int n)
         for(int i=0;i<c;i++)
         {
             if(strcmp((stu+i)->srn , (stu+i+1)->srn) > 0)
-                swap((stu+i)->srn , (stu+i+1)->srn);
+                swap(stu , i , i+1);
         }
         c++;
     }

@@ -1,0 +1,8 @@
+Task 1 : Implement Linear search for a list of numbers .
+
+Task 2 : Implement Binary search (Assume sorted) for a list of numbers.
+
+Task 3 : Using Bubble sort , sort a list of numbers.
+
+Task 4 : Write a program to multiply two matrices [Assuming sq matrices] using static
+         memory allocation
