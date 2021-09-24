@@ -10,7 +10,10 @@ bool recusrsesub(char* string , char* substring , int n , int start){
         if(string[start+i]==substring[i])
             continue;
         else
+        {
             flag=0;
+            break;    
+        }
     }
     if(flag==1)
         return true;

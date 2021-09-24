@@ -30,14 +30,5 @@ int main()
     printf("Enter number of disks : ");
     scanf("%d",&n);
     tower_of_hanoi(n,'A','B','C'); //considering the three disks to be called A B and C
-    //i : 1->ans
-    //I writing down nice interative solution
     //S-Source , D-Destination , A-Auxilary
-    //if i%3==1 : S <-> D 
-    //if i%3==2 : S <-> A
-    //if i%3==0 : A <-> S
-    //but a interative solution needs a stack imple sadly , as this % logic can
-    //tell between what towers the operation is , but cant tell which direction
-    //and that need a comparision of sizes on both towers , hence the "<->"
-    //let's implement recursive solution
 }

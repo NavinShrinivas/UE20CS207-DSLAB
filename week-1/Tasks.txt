@@ -8,7 +8,7 @@ Task 3 : Write a program using DMA to store details about students
          using subject codes , and also print the details of all students when
          asked to do so.
 
-Task 4 : recursive implmentation og tower of hanoi
+Task 4 : recursive implmentation of tower of hanoi
 
 Task 5 : Write a program that stores data of IPL Players , 
          [name, team].
