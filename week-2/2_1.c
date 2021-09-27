@@ -1,4 +1,6 @@
 #include"2_1.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 void inputquad(struct polytop* quad)
 {
@@ -20,7 +22,7 @@ void inputquad(struct polytop* quad)
     scanf("%d",&(temp->px));
     printf("Enter power of Y : ");
     scanf("%d",&(temp->py));
-    quad->link=temp;
+    quad->link=temp;//the first node to be appending to
 
     struct poly* copy=quad->link;
     for(int i=1;i<n;i++)
@@ -36,8 +38,6 @@ void inputquad(struct polytop* quad)
         copy->link=temp;
         copy=copy->link;
     }
-    copy->link=NULL;//yeah i know this is seems very mess :'( , maybe
-    //an exit check loop can make this a neat soln , not doing it , hehe.
     return;
 }
 void displayquad(struct polytop* quad)
@@ -59,7 +59,6 @@ void displayquad(struct polytop* quad)
 void addquads(struct polytop* quad1 , struct polytop* quad2)
 {
     //adding quad2 onto quad1
-    printf("HALO");
     struct poly* curr = quad1->link;
     while(curr!=NULL)
     {
@@ -74,37 +73,35 @@ void addquads(struct polytop* quad1 , struct polytop* quad2)
         }
         curr=curr->link;
     }
-    printf("HALO");
-    struct poly* curr2 = quad2->link;
-    struct poly* lastnode = quad1->link;
-    while(lastnode != NULL)
-        lastnode=lastnode->link;
-    while(curr2!=NULL)
+    curr=quad1->link;
+    while(curr->link!=NULL)
+        curr=curr->link;
+    struct poly* temp = quad2->link;
+    while(temp!=NULL)
     {
-        bool nohitflag=true;
-        struct poly* adder = quad1->link;
-        while(adder!=NULL)
+        int existflag=0;
+        struct poly* temp2=quad1->link;
+        while(temp2!=NULL)
         {
-            if(adder->px == curr2->px && adder->py == curr2->py)
+            if(temp2->px == temp->px && temp2->py==temp->py && existflag==0)
             {
-                nohitflag=false;
+                existflag=1;
                 break;
             }
-            adder=adder->link;
+            temp2=temp2->link;
         }
-        if(nohitflag==true)
-        {
-            struct poly* temp = (struct poly*)malloc(sizeof(struct poly));
-            temp->coeff = curr2->coeff;
-            temp->px = curr2->px;
-            temp->py = curr2->py;
-            temp->link = NULL;
-            lastnode->link = temp ;
-            lastnode = lastnode->link;
+        if(existflag)
+            temp=temp->link;
+        else{
+            struct poly* newpoly=(struct poly*)malloc(sizeof(struct poly));
+            newpoly->link=NULL;
+            newpoly->px=temp->px;
+            newpoly->py=temp->py;
+            newpoly->coeff=temp->coeff;
+            curr->link=newpoly;
+            curr=curr->link;
+            temp=temp->link;
         }
     }
-
-
-    
 
 }
