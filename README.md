@@ -9,3 +9,6 @@ get caught for plagiarism it's on you xD.
 I maintin all the code with such structure cus it comes in handy [i.e it's not for you], Usually during final project or some other course which needs these 
 programs , and githubs search function comes in really handy for such times.its
 I'll also attach the questions in text format in tasks.txt in each weeks folder
+
+
+I also have attached a submission script that compiles a pdf as per my needs , super helpful , neverthless its also one of the reasons for my navin comvenction being extremely consistent from week-4 onwards. just putting it out there.
