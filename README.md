@@ -12,3 +12,7 @@ I'll also attach the questions in text format in tasks.txt in each weeks folder
 
 
 I also have attached a submission script that compiles a pdf as per my needs , super helpful , neverthless its also one of the reasons for my navin comvenction being extremely consistent from week-4 onwards. just putting it out there.
+
+
+
+**Note : NVM i ditched this repo , move over to Algorithms Grind, i have almost all the codes there and not to mention in much better formatting and impl**
